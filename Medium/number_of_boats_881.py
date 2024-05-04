@@ -1,7 +1,7 @@
 def numRescueBoats(people, limit):
     #Solution 1:
     boats = 0
-    temp = sorted(people)
+    temp = sorted(people) # can also sort in place with people.sort()
     start = 0
     end = len(temp) - 1
     while start < end:            
@@ -31,8 +31,8 @@ def numRescueBoats(people, limit):
 
     #Solution 2:
     while start <= end:   
+        boats +=1
         if temp[start] + temp[end] <= limit:
-            boats +=1
             start += 1
         end -= 1
          
